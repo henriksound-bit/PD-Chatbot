@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="../static/script.js"></script>
+    <title>Project D(ai)abetes</title>
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header-container">
+        <div id="header">
+            <h1>Project D(ai)abetes</h1>
+            <h3>A chatbot that specializes in living with Type 1
+                diabetes and associated treatment therapy. </h3>
+            <p>Disclaimer: Diabetes Assistant may produce incorrect or inaccurate information. Always speak with your
+            physician or endocrynologist before making any changes to your diabetes therapy. By using this application you waive
+            all liability of the creator in your decisions.</p>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar-container">
+        <div id="sidebar">
+            <!-- Link to Home, How to Use, and About pages -->
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('how_to_use') }}">How to Use</a>
+            <a href="{{ url_for('about') }}">About</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-container">
+        <div class="about-header">
+            About
+        </div>
+        <div class="about-content">
+          <p> Project D(ai)abetes is a project that I've been dreaming of building since I had an epiphany in my
+          integral calculus class a few years ago. At the time, I didn't know enough about AI and its capabilities, but
+          having finished my education and gained an understanding of recent LLM technology, it's finally coming to fruition.
+          This project aims to combine the emergent features of Large Language Models alongside more classical AI methods to
+          create a tool that democratizes diabetes care.</p>
+          <br>
+          <p>This is an entirely experimental project, and will constantly be a work in progress. It is maintained by myself,
+          a single CompSci graduate living with Type 1 Diabetes for the past 15 years. While I may not have the formal medical knowledge,
+          I believe in the power of experiential knowledge gained after a decade and a half of living with this condition, and of similar knowledge disseminated
+            by my peers that also have a vast amount of diabetes experience. The custom
+            dataset used to train the model has been personally hand-crafted, including both formal medical literature, open-source information,
+          and personal knowledge. The idea is to make this project as open-source as possible, allowing other people living with diabetes
+          to contribute to the dataset with their own experiential knowledge (future feature).</p>
+          <br>
+          <p>At the same time, I am building this because I believe that AI is one of the best solutions for diabetes therapy.
+          The architecture behind this project will constantly change and be improved upon in order to help people with diabetes
+          efficiently and effectively.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
