@@ -32,7 +32,7 @@ def test_bot_response():
     return jsonify({'response': 'Praesent varius, odio venenatis fermentum tristique, nisl metus feugiat risus, in mollis velit velit ac neque. Donec tincidunt venenatis velit, at lacinia enim ornare eget. Ut sit amet malesuada arcu, sit amet ullamcorper risus. Praesent finibus pellentesque cursus. Nunc a purus sem. Duis fermentum pretium enim vitae malesuada. Etiam dignissim aliquam turpis, vitae accumsan quam rutrum sed. Maecenas porta elementum tempus. Pellentesque tristique tortor id tellus euismod, nec tempor mi rhoncus.'})
 
 
-
+# TODO: Add route to get pump/injection data as JSON
 
 # @app.route("/get", methods=["POST"])
 # def get_bot_response():
