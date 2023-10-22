@@ -66,6 +66,56 @@ document.addEventListener('DOMContentLoaded', (event) => {
             sendUserMessage(e);
         }
     });
+
+    const table = document.getElementById("pump-settings-table");
+
+    // Add Column Button
+    document.getElementById("add-column-btn").addEventListener("click", function() {
+    let table = document.getElementById("pump-settings-table");
+    let columns = table.getElementsByTagName("th").length; // Number of columns
+
+    // Clone the header and append
+    let originalHeader = table.querySelector("thead tr th:last-child");
+    let clonedHeader = originalHeader.cloneNode(true);
+    table.querySelector("thead tr").appendChild(clonedHeader);
+
+    // Clone each cell in the column and append
+    let rows = table.getElementsByTagName("tr");
+    for (let i = 1; i < rows.length; i++) { // Starting from 1 to skip the header
+        let originalCell = rows[i].querySelector("td:last-child");
+        let clonedCell = originalCell.cloneNode(true);
+        rows[i].appendChild(clonedCell);
+    }
+    });
+
+
+    // Remove Column Button
+    document.getElementById("remove-column-btn").addEventListener("click", function() {
+        if (table.rows[0].cells.length > 2) {  // Ensure there's always at least the label column and one editable column
+            for (let i = 0; i < table.rows.length; i++) {
+                table.rows[i].deleteCell(-1);  // Delete the last cell of each row
+            }
+        }
+    });
+
+});
+
+document.getElementById('pump-settings-form').addEventListener('submit', function(e) {
+    const tableRows = document.querySelectorAll('#pump-settings-table tbody tr');
+    const data = {};
+
+    tableRows.forEach(row => {
+        const key = row.querySelector('td:first-child').textContent.trim();
+        const value = row.querySelector('td:last-child').textContent.trim();
+        data[key] = value;
+    });
+
+    // Add the data to a hidden input before submitting
+    const hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.name = 'data';
+    hiddenInput.value = JSON.stringify(data);
+    this.appendChild(hiddenInput);
 });
 
 

@@ -148,3 +148,66 @@ h1, h3, p {
     display: table;
 }
 
+/* Overall container for the data table */
+#data-table-container {
+    margin-left: 15px; /* To left-justify the table */
+    margin-bottom: 15px; /* Space between the table and chat window */
+    width: fit-content; /* Fit the width of the content */
+    border: 1px solid lightgray; /* Outline of the table container */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the container */
+    overflow: hidden; /* Ensures that the inner table corners don't stick out */
+    max-width: calc(100% - 210px);
+    overflow-x: auto;
+}
+
+.data-table-container {
+    max-width: calc(100% - 210px); /* Take up the remaining space minus the width of the sidebar */
+    overflow-x: auto; /* Add a scrollbar if content overflows */
+}
+
+/* Styling the table */
+#pump-settings-table {
+    width: 100%; /* Take full width of the container */
+    border-collapse: collapse; /* Collapse cell borders */
+}
+
+/* Styling the table cells and headers */
+#pump-settings-table th, #pump-settings-table td {
+    border: 1px solid lightgray; /* Cell borders */
+    padding: 8px 12px; /* Cell padding */
+    text-align: left; /* Left-align text in cells */
+}
+
+/* Styling the editable cells */
+.editable-cell {
+    border: 1px solid lightgray;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+
+/* Styling for the button container */
+#button-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-direction: row-reverse;
+    gap: 10px; /* Spacing between buttons */
+    margin-bottom: 10px; /* Space below the buttons */
+
+}
+
+/* Styling the Add/Remove Column button */
+/* Common styling for both buttons */
+#add-column-btn, #remove-column-btn {
+    padding: 5px 10px; /* Button padding */
+    border-radius: 5px; /* Rounded corners for the button */
+    background-color: #eee; /* Light gray background */
+    border: none; /* Remove default borders */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#add-column-btn:hover, #remove-column-btn:hover {
+    background-color: #ddd; /* Darker gray background on hover */
+}
+

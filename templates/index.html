@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <title>Project D(ai)abetes</title>
 
@@ -34,8 +34,46 @@
     </div>
 
     <!--TODO: Add Toggle button for Pump Settings input-->
-    <!--TODO: Add pump setting table/box    -->
     <!--TODO: Add shot/injection settings input -->
+
+    <form id="pump-settings-form" action="/save_data" method="post">
+        <div id="data-table-container">
+            <table id="pump-settings-table">
+                <thead>
+                    <tr>
+                        <th>Pump Settings</th>
+                        <th>Enter values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 4 rows with editable cells for the user -->
+                    <tr>
+                        <td>Start Time</td>
+                        <td contenteditable="true" placeholder="00:00"></td>
+                    </tr>
+                    <tr>
+                        <td>Basal Rate</td>
+                        <td contenteditable="true" placeholder="1.0u"></td>
+                    </tr>
+                    <tr>
+                        <td>Insulin:Carb</td>
+                        <td contenteditable="true" placeholder="1:15"></td>
+                    </tr>
+                    <tr>
+                        <td>ISF</td>
+                        <td contenteditable="true" placeholder="1:20"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Button to add more columns -->
+            <div id="button-container">
+                <button id="add-column-btn">Add Column</button>
+                <button id="remove-column-btn">Remove Column</button>
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
     <div class="chat-container">
         <div class="chat-header">
             Diabetes Assistant
