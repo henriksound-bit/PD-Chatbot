@@ -36,8 +36,9 @@
     <!--TODO: Add Toggle button for Pump Settings input-->
     <!--TODO: Add shot/injection settings input -->
 
-    <form id="pump-settings-form" action="/save_data" method="post">
-        <div id="data-table-container">
+
+    <div id="data-table-container">
+        <form id="pump-settings-form" action="/save_data" method="post">
             <table id="pump-settings-table">
                 <thead>
                     <tr>
@@ -67,12 +68,13 @@
             </table>
             <!-- Button to add more columns -->
             <div id="button-container">
-                <button id="add-column-btn">Add Column</button>
-                <button id="remove-column-btn">Remove Column</button>
+                <button type="button" id="add-column-btn">Add Column</button>
+                <button type="button" id="remove-column-btn">Remove Column</button>
             </div>
             <button type="submit">Submit</button>
-        </div>
-    </form>
+        </form>
+    </div>
+
 
     <div class="chat-container">
         <div class="chat-header">

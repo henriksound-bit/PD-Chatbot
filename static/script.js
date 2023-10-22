@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Add Column Button
     document.getElementById("add-column-btn").addEventListener("click", function() {
-    let table = document.getElementById("pump-settings-table");
     let columns = table.getElementsByTagName("th").length; // Number of columns
 
     // Clone the header and append

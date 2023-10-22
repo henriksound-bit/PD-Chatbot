@@ -33,6 +33,13 @@ def test_bot_response():
 
 
 # TODO: Add route to get pump/injection data as JSON
+@app.route("/save_data", methods=["POST"])
+def save_date():
+    data = request.form.get('data')
+    app.logger.debug(f"Received data: {data}")  # Log received message
+    json_data = json.loads(data)
+
+    return jsonify({"message": "Data received"})
 
 # @app.route("/get", methods=["POST"])
 # def get_bot_response():

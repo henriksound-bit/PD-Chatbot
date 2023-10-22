@@ -148,9 +148,13 @@ h1, h3, p {
     display: table;
 }
 
+#pump-settings-form {
+    overflow: visible;
+}
+
 /* Overall container for the data table */
 #data-table-container {
-    margin-left: 15px; /* To left-justify the table */
+    margin-left: 210px; /* To left-justify the table */
     margin-bottom: 15px; /* Space between the table and chat window */
     width: fit-content; /* Fit the width of the content */
     border: 1px solid lightgray; /* Outline of the table container */
@@ -159,11 +163,6 @@ h1, h3, p {
     overflow: hidden; /* Ensures that the inner table corners don't stick out */
     max-width: calc(100% - 210px);
     overflow-x: auto;
-}
-
-.data-table-container {
-    max-width: calc(100% - 210px); /* Take up the remaining space minus the width of the sidebar */
-    overflow-x: auto; /* Add a scrollbar if content overflows */
 }
 
 /* Styling the table */
